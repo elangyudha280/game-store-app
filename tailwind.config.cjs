@@ -18,7 +18,10 @@ module.exports = {
         'content-light':'#1e1e1fa',
         'content-dark-gray':'#6e6e89',
         'content-yellow-banana':'#f8cb62',
-        'content-green':'#09ba7a'
+        'content-green':'#09ba7a',
+        'content-login':'#1c2836',
+        'content-btn-login':'#03bfa4',
+        'content-text-login':'#7f8890'
       }
     },
   },
