@@ -7,7 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'montserrat':['"Montserrat"']
+        'montserrat':['"Montserrat"'],
+        'gilroy-bold':['"Gilroy-bold"'],
+        'gilroy-medium':['"Gilroy-medium"'],
+        'gilroy-regular':['"Gilroy-regular"']
       },
       colors:{
         'content-purple':'#8307ff',
