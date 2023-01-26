@@ -3,7 +3,7 @@ import { useState } from 'react'
 function App() {
 
   return (
-    <div className="App">
+    <div className="App relative w-full h-[100vh] ">
       
     </div>
   )
