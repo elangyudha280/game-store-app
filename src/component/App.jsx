@@ -19,6 +19,9 @@ function App() {
          }, 600);
         }
       }
+      else{
+        setLoading(false)
+      }
     };
 
     document.addEventListener("readystatechange",onPageLoad);
