@@ -9,26 +9,23 @@ function App() {
 
     
   useEffect(() => {
-    const onPageLoad = (event) => {
-      if (event.target.readyState === "complete") {
-        document.querySelector('.loading').classList.add('opacity-0')                
-        if(document.querySelector('.loading').classList.contains('opacity-0')){
-         setTimeout(() => {
-          setLoading(false)
-          document.querySelector('.loading').classList.remove('opacity-0')
-         }, 200);
-        }
-        return
-      }
-    
-    };
-
-    document.addEventListener("readystatechange",onPageLoad);
-
-    return ()=>{
-      return document.removeEventListener('readystatechange',onPageLoad)
+    let domLoad = ()=>{
+      setLoading(true)
     }
-    
+    if (document.readyState !== 'loading') {
+       setTimeout(() => {
+        document.querySelector('.loading').classList.add('opacity-0')
+       }, 400);
+       setTimeout(() => {
+        setLoading(false)
+        document.querySelector('.loading').classList.remove('opacity-0')
+       }, 620);
+    } else {
+      document.addEventListener('DOMContentLoaded',domLoad);
+  }
+    return ()=>{
+      return  document.removeEventListener('DOMContentLoaded',domLoad);
+    }
   },[])
 
   return (
