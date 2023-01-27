@@ -22,6 +22,9 @@ module.exports = {
         'content-login':'#1c2836',
         'content-btn-login':'#03bfa4',
         'content-text-login':'#7f8890'
+      },
+      screens:{
+        'slg':'900px'
       }
     },
   },
