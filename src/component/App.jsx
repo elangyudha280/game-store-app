@@ -5,31 +5,31 @@ import Loading from './loading';
 
 function App() {
 
-  const [loading,setLoading] = useState(true);
+  const [loading,setLoading] = useState(false);
 
     
-  useEffect(() => {
-    const onPageLoad = (event) => {
-      if (event.target.readyState === "complete") {
-        document.querySelector('.loading').classList.add('opacity-0')                
-        if(document.querySelector('.loading').classList.contains('opacity-0')){
-         setTimeout(() => {
-          setLoading(value=>value = false)
-          document.querySelector('.loading').classList.remove('opacity-0')
-         }, 600);
-        }
-      }
-      else{
-        setLoading(false)
-      }
-    };
+  // useEffect(() => {
+  //   const onPageLoad = (event) => {
+  //     if (event.target.readyState === "complete") {
+  //       document.querySelector('.loading').classList.add('opacity-0')                
+  //       if(document.querySelector('.loading').classList.contains('opacity-0')){
+  //        setTimeout(() => {
+  //         setLoading(value=>value = false)
+  //         document.querySelector('.loading').classList.remove('opacity-0')
+  //        }, 600);
+  //       }
+  //     }
+  //     else{
+  //       setLoading(false)
+  //     }
+  //   };
 
-    document.addEventListener("readystatechange",onPageLoad);
+  //   document.addEventListener("readystatechange",onPageLoad);
 
-    return ()=>{
-      return document.removeEventListener('readystatechange',onPageLoad)
-    }
-  },[])
+  //   return ()=>{
+  //     return document.removeEventListener('readystatechange',onPageLoad)
+  //   }
+  // },[])
   return (
     <>
       {
