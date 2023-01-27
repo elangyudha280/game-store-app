@@ -28,7 +28,7 @@ module.exports = {
       },
       animation: {
         'show': 'show 1s linear forwards',
-        'show-img': 'show 0.6s linear forwards',
+        'show-img': 'show 0.6s 0.3s linear forwards',
       },
         keyframes: {
         show: {
