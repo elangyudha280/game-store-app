@@ -5,7 +5,7 @@
 const FormLogin = ()=>{
     return(
         <section className="form-login w-full  px-3 py-8 relative h-full grid  place-items-center  slg:p-2 slg:w-[500px] min-[2500px]:w-full">
-            <form action="#" className="relative w-full min-[450px]:w-[410px]  " autoComplete="true">
+            <form action="#" className="relative w-full min-[450px]:w-[410px]"  autoComplete="off">
                 <h2 className="title-form font-gilroy-medium text-2xl text-white mb-9 ">Login</h2>
                 <div className="input-group  w-full">
                     <label htmlFor="username" className="text-white bg-[#070616] font-gilroy-regular text-sm absolute left-[0.7em] translate-y-[-0.8em] px-2 rounded-md">Username</label>
