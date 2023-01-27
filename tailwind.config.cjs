@@ -25,6 +25,15 @@ module.exports = {
       },
       screens:{
         'slg':'900px'
+      },
+      animation: {
+        'show': 'show 1s linear forwards',
+      },
+        keyframes: {
+        show: {
+          '0%': { opacity:'0' },
+          '100%': { opacity:'1' },
+        }
       }
     },
   },
