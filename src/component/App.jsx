@@ -14,7 +14,7 @@ function App() {
         document.querySelector('.loading').classList.add('opacity-0')                
         if(document.querySelector('.loading').classList.contains('opacity-0')){
          setTimeout(() => {
-          setLoading(false)
+          setLoading(value=>value = false)
           document.querySelector('.loading').classList.remove('opacity-0')
          }, 600);
         }
