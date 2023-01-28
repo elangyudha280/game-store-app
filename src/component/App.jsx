@@ -9,6 +9,7 @@ function App() {
 
     
   useEffect(() => {
+    document.title = 'Login page'
     let domLoad = ()=>{
       setLoading(true)
     }

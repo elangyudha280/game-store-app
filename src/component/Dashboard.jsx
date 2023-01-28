@@ -1,16 +1,43 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import Loading from "./loading";
 
 
 const Dashboard = ()=>{
 
-    useEffect(()=>{
-        document.title = 'Dashboard page'
-    },[])
+    
+  const [loading,setLoading] = useState(true);
+    
+  useEffect(() => {
+    document.title = 'Dashboard page'
+    let domLoad = ()=>{
+      setLoading(true)
+    }
+    if (document.readyState !== 'loading') {
+       setTimeout(() => {
+        document.querySelector('.loading').classList.add('opacity-0')
+       }, 400);
+       setTimeout(() => {
+        setLoading(false)
+        document.querySelector('.loading').classList.remove('opacity-0')
+       }, 775);
+    } else {
+      document.addEventListener('DOMContentLoaded',domLoad);
+  }
+    return ()=>{
+      return  document.removeEventListener('DOMContentLoaded',domLoad);
+    }
+  },[])
 
     return(
-        <section className="Dashboard gradient overflow-x-hidden  relative w-[100%] h-[100vh]">
+       <>
+        {
+            (loading) ? <Loading/> 
+            :
+            <section className="Dashboard animate-show gradient overflow-x-hidden  relative w-[100%] h-[100vh]">
                   
-        </section>
+            </section>
+        }
+       </>
     )
 }
 
