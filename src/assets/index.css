@@ -27,6 +27,10 @@
     @apply  relative w-full h-[100vh] animate-show bg-[#070616] grid auto-rows-auto grid-cols-[1fr] overflow-x-hidden overflow-y-auto  slg:grid-cols-[1fr_auto]  min-[2500px]:grid-cols-[1fr_0.4fr];
   }
 
+  .gradient{
+    background:linear-gradient(45deg,#27223D,rgba(131, 7, 255, 0.2))
+  }
+
 
   @-webkit-keyframes cube {
   0% {
