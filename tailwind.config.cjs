@@ -27,7 +27,7 @@ module.exports = {
         'slg':'900px'
       },
       animation: {
-        'show': 'show 0.4s linear forwards',
+        'show': 'show 0.3s linear forwards',
         'show-img': 'show 0.4s 0.5s linear forwards',
       },
         keyframes: {

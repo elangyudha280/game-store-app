@@ -19,7 +19,7 @@ function App() {
        setTimeout(() => {
         setLoading(false)
         document.querySelector('.loading').classList.remove('opacity-0')
-       }, 620);
+       }, 775);
     } else {
       document.addEventListener('DOMContentLoaded',domLoad);
   }
