@@ -16,11 +16,11 @@ function App() {
     if (document.readyState !== 'loading') {
        setTimeout(() => {
         document.querySelector('.loading').classList.add('opacity-0')
-       }, 400);
+       }, 500);
        setTimeout(() => {
         setLoading(false)
         document.querySelector('.loading').classList.remove('opacity-0')
-       }, 775);
+       }, 800);
     } else {
       document.addEventListener('DOMContentLoaded',domLoad);
   }
@@ -29,6 +29,7 @@ function App() {
     }
   },[])
 
+  
   return (
     <>
       {
