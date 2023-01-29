@@ -3,15 +3,15 @@ import { Navigate,Outlet } from "react-router-dom";
 
 
 
-const ProtectedLogin = ()=>{
+const ProtectedLogin = ({children})=>{
 
     let userToken =localStorage.getItem('token'); 
 
     if(userToken){
-        return <Navigate to="dashboard" replace/>
+        return <Navigate to="/dashboard" replace={true}/>
     }
     
-    return <Outlet/> 
+    return <>{children}</> 
 }
 
 export default ProtectedLogin;

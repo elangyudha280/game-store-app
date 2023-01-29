@@ -4,12 +4,17 @@ import { Navigate,Outlet } from "react-router-dom";
 
 
 // fungsi protected 
-const ProtectedDashboard =()=>{
-    if(!localStorage.getItem('token')){
-        return <Navigate to='/' replace/>
-    }
+const ProtectedDashboard =({children})=>{
+    // if(!localStorage.getItem('token')){
+    //     return <Navigate to='/' replace={true}/>
+    // }
     
-    return <Outlet/>
+    // return <Outlet/>
+ if(!localStorage.getItem('token')){
+        return <Navigate to='/' replace={true}/>
+    }
+
+    return <>{children}</>
 }
 
 export default ProtectedDashboard;

@@ -13,12 +13,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<ProtectedLogin/>}>
-          <Route path='/' element={<App/> }/>
-        </Route> 
-        <Route element={<ProtectedDashboard/>}>
-            <Route path='dashboard' element={<Dashboard/>}/>
-        </Route>
+        <Route path='/'
+         element={<ProtectedLogin>
+            <App/>
+         </ProtectedLogin>}/>
+          <Route path='/dashboard' element={<ProtectedDashboard>
+            <Dashboard/>
+          </ProtectedDashboard>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
