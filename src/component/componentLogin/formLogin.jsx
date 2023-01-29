@@ -8,7 +8,6 @@ const FormLogin = ()=>{
     let toDashboard = useNavigate()
     // event login 
     const eventLogin = (e)=>{
-        e.preventDefault()
       
         // set  token and data user
         setStorage.addStorage('token','fake token')
@@ -25,7 +24,7 @@ const FormLogin = ()=>{
         <section className="form-login w-full  px-3 py-[6em] relative h-full grid  place-items-center  slg:p-2 slg:w-[500px] min-[2500px]:w-full">
             <section  className="relative animate-show-img opacity-0 w-full min-[450px]:w-[410px]"  >
                 <h2 className="title-form font-gilroy-medium text-2xl text-white mb-9 ">Login</h2>
-              <form action="#" onSubmit={eventLogin} autoComplete="off">
+              <form action="#" onSubmit={handleSubmit(eventLogin)} autoComplete="off">
                   {/* input username */}
                   <div className="input-group  w-full">
                     <label htmlFor="username" className="text-white bg-[#070616] font-gilroy-regular text-sm absolute left-[0.7em] translate-y-[-0.8em] px-2 rounded-md">Username</label>
