@@ -5,11 +5,10 @@ import { Navigate,Outlet } from "react-router-dom";
 
 // fungsi protected 
 const ProtectedDashboard =()=>{
-    if(!localStorage.getItem('user')){
-        console.log('user tidak ada')
+    if(!localStorage.getItem('token')){
         return <Navigate to='/' replace/>
     }
-    console.log('user ada')
+    
     return <Outlet/>
 }
 

@@ -5,13 +5,12 @@ import { Navigate,Outlet } from "react-router-dom";
 
 const ProtectedLogin = ()=>{
 
-    let userStorage =localStorage.getItem('user'); 
+    let userToken =localStorage.getItem('token'); 
 
-    if(userStorage){
-        console.log('user ada')
+    if(userToken){
         return <Navigate to="/dashboard" replace/>
     }
-    console.log('tidak ada')
+    
     return <Outlet/> 
 }
 

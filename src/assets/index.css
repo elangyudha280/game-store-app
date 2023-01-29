@@ -31,6 +31,13 @@
     background:linear-gradient(45deg,#27223D,rgba(131, 7, 255, 0.2))
   }
 
+  .input-username{
+    @apply outline-none w-full px-4 pt-4 pb-3  bg-transparent text-white border-[1px] border-content-green rounded-md font-gilroy-medium placeholder:font-gilroy-regular caret-content-green;
+  }
+
+  .input-password{
+    @apply outline-none w-full px-4 pt-4 pb-3  bg-transparent text-white border-[1px] border-content-green rounded-md font-gilroy-medium placeholder:font-gilroy-regular caret-content-green;
+  }
 
   @-webkit-keyframes cube {
   0% {
