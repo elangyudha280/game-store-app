@@ -8,7 +8,7 @@ const ProtectedLogin = ()=>{
     let userToken =localStorage.getItem('token'); 
 
     if(userToken){
-        return <Navigate to="/dashboard" replace/>
+        return <Navigate to="dashboard" replace/>
     }
     
     return <Outlet/> 
