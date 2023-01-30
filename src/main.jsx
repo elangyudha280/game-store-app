@@ -5,7 +5,9 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import App from './component/App'
 import './assets/index.css'
+
 import Dashboard from './component/Dashboard'
+
 import ProtectedDashboard from './utils/protectedDashboard'
 import ProtectedLogin from './utils/ProectedLogin'
 
