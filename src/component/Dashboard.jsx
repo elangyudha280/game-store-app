@@ -1,13 +1,29 @@
-import { useEffect,useState } from "react";
+import { useEffect,useState,useReducer } from "react";
+import {DashboardContext} from '../context/dashboardContext'
+import reducer from "../features/reducer";
+
 import Navbar from "./componentDashboard/Navbar";
+
+
+
 // component loading
 import Loading from "./loading";
 
 
+let dashboardDatas = {
+  showDevide:false
+}
+
 const Dashboard = ()=>{
 
+  let [state,dispatch] = useReducer(reducer,dashboardDatas)
     
   const [loading,setLoading] = useState(true);
+
+  let detail = {
+    state,
+    dispatch
+  }
     
   useEffect(() => {
     document.title = 'Dashboard page'
@@ -32,16 +48,18 @@ const Dashboard = ()=>{
 
     return(
        <>
-        {
-            (loading) ? <Loading/> 
-            :
-            <section className="Dashboard animate-show gradient overflow-x-hidden  relative w-[100%] h-[100vh]">
-                  
-                  {/* component navbar */}
-                  <Navbar/>
+        <DashboardContext.Provider value={detail}>
+          {
+              (loading) ? <Loading/> 
+              :
+              <section className="Dashboard animate-show gradient overflow-x-hidden  relative w-[100%] h-[100vh]">
+                    
+                    {/* component navbar */}
+                    <Navbar/>
 
-            </section>
-        }
+              </section>
+          }
+        </DashboardContext.Provider>
        </>
     )
 }
