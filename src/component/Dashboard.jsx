@@ -13,7 +13,7 @@ import ModalLogout from "./modal/modalLogout";
 
 let dashboardDatas = {
   showDevide:false,
-  showModalLogout:true
+  showModalLogout:false
 }
 
 const Dashboard = ()=>{
