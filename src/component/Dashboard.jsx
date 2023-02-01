@@ -8,10 +8,12 @@ import Navbar from "./componentDashboard/Navbar";
 
 // component loading
 import Loading from "./loading";
+import ModalLogout from "./modal/modalLogout";
 
 
 let dashboardDatas = {
-  showDevide:false
+  showDevide:false,
+  showModalLogout:true
 }
 
 const Dashboard = ()=>{
@@ -57,6 +59,10 @@ const Dashboard = ()=>{
                     {/* component navbar */}
                     <Navbar/>
 
+              {/* modal logout */}
+                {
+                  (state.showModalLogout) && <ModalLogout/>
+                }
               </section>
           }
         </DashboardContext.Provider>
