@@ -37,8 +37,8 @@ const Dashboard = ()=>{
         document.querySelector('.loading').classList.add('opacity-0')
        }, 400);
        setTimeout(() => {
-        setLoading(false)
         document.querySelector('.loading').classList.remove('opacity-0')
+        setLoading(false)
        }, 775);
     } else {
       document.addEventListener('DOMContentLoaded',domLoad);

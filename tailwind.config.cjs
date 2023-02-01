@@ -27,13 +27,23 @@ module.exports = {
         'slg':'900px'
       },
       animation: {
-        'show': 'show 0.3s linear forwards',
-        'show-img': 'show 0.4s 0.5s linear forwards',
+        'show': 'show 0.5s linear forwards',
+        'show-img': 'show 1s 0.5s linear forwards',
+        'slide': 'slide 0.9s  cubic-bezier(1,-0.36,.02,1.36) forwards',
+        'slide-text': 'slideText 1.6s 0.8  cubic-bezier(.89,-0.39,.4,1.17) forwards',
       },
         keyframes: {
         show: {
           '0%': { opacity:'0' },
           '100%': { opacity:'1' },
+        },
+        slide: {
+          '0%': { transform:'translateY(-100%)' },
+          '100%': { transform:'translateY(0)' },
+        },
+        slideText:{
+          '0%':{opacity:'0',transform:'translateY(-20px)'},
+          '100%':{opacity:'1',transform:'translateY(0)'}
         }
       }
     },

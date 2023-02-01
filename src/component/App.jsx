@@ -16,11 +16,11 @@ function App() {
     if (document.readyState !== 'loading') {
        setTimeout(() => {
         document.querySelector('.loading').classList.add('opacity-0')
-       }, 500);
+       }, 400);
        setTimeout(() => {
-        setLoading(false)
         document.querySelector('.loading').classList.remove('opacity-0')
-       }, 800);
+        setLoading(false)
+       }, 770);
     } else {
       document.addEventListener('DOMContentLoaded',domLoad);
   }
